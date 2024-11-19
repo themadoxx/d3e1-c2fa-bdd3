@@ -85,7 +85,6 @@
 		@font-face {
     font-family: 'Panel Sans'; /* Nom de la police que vous utiliserez dans CSS */
     src: url('/assets/font/fonnts.com-Panel_Sans_Bold.woff2') format('woff2'), /* Meilleur format */
-         url('/assets/font/fonnts.com-Panel_Sans_Bold.woff') format('woff'), 
          url('/assets/font/fonnts.com-Panel_Sans_Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
@@ -94,7 +93,6 @@
 @font-face {
     font-family: 'Panel Sans';
     src: url('/assets/font/fonnts.com-Panel_Sans_Medium.woff2') format('woff2'),
-         url('/assets/font/fonnts.com-Panel_Sans_Medium.woff') format('woff'),
          url('/assets/font/fonnts.com-Panel_Sans_Medium.ttf') format('opentype');
     font-weight: 500; /* Medium correspond souvent à un poids 500 */
     font-style: normal;
@@ -810,6 +808,22 @@
 		href='wp-content/uploads/elementor/css/custom-frontend.min44f8.css?ver=1727434207' type='text/css'
 		media='all' />
 	<style id='elementor-frontend-inline-css' type='text/css'>
+		
+		@font-face {
+    font-family: 'Panel Sans'; /* Nom de la police que vous utiliserez dans CSS */
+    src: url('/assets/font/fonnts.com-Panel_Sans_Bold.woff2') format('woff2'), /* Meilleur format */
+         url('/assets/font/fonnts.com-Panel_Sans_Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Panel Sans';
+    src: url('/assets/font/fonnts.com-Panel_Sans_Medium.woff2') format('woff2'),
+         url('/assets/font/fonnts.com-Panel_Sans_Medium.ttf') format('opentype');
+    font-weight: 500; /* Medium correspond souvent à un poids 500 */
+    font-style: normal;
+}
 		.elementor-kit-15 {
 			--e-global-color-primary: #000000;
 			--e-global-color-secondary: #FFFFFF;
@@ -821,10 +835,10 @@
 			--e-global-color-13ed1179: #C6C6C6;
 			--e-global-color-d62e15c: #EBEBEB;
 			--e-global-color-6caec2d: #F7F7F7;
-			--e-global-typography-primary-font-family: "panel-sans";
+			--e-global-typography-primary-font-family: 'Panel Sans';
 			--e-global-typography-primary-font-size: 31px;
 			--e-global-typography-primary-font-weight: 700;
-			--e-global-typography-secondary-font-family: "panel-sans";
+			--e-global-typography-secondary-font-family: 'Panel Sans';
 			--e-global-typography-secondary-font-weight: 700;
 			--e-global-typography-secondary-text-transform: uppercase;
 			--e-global-typography-secondary-letter-spacing: 1px;
@@ -832,7 +846,7 @@
 			--e-global-typography-text-font-family: "sole-sans-variable";
 			--e-global-typography-text-font-size: 16px;
 			--e-global-typography-text-font-weight: 500;
-			--e-global-typography-accent-font-family: "panel-sans";
+			--e-global-typography-accent-font-family: 'Panel Sans';
 			--e-global-typography-accent-font-size: 16px;
 			--e-global-typography-accent-font-weight: 500;
 			--e-global-typography-accent-font-style: italic;
@@ -869,7 +883,7 @@
 
 		.elementor-kit-15 h1 {
 			color: var(--e-global-color-primary);
-			font-family: "panel-sans", Sans-serif;
+			font-family: 'Panel Sans', Sans-serif;
 			font-size: 91px;
 			font-weight: 700;
 			text-transform: lowercase;
@@ -877,7 +891,7 @@
 
 		.elementor-kit-15 h2 {
 			color: var(--e-global-color-primary);
-			font-family: "panel-sans", Sans-serif;
+			font-family: 'Panel Sans', Sans-serif;
 			font-size: 60px;
 			font-weight: 500;
 			text-transform: lowercase;
@@ -892,7 +906,7 @@
 
 		.elementor-kit-15 h4 {
 			color: var(--e-global-color-primary);
-			font-family: "panel-sans", Sans-serif;
+			font-family: 'Panel Sans', Sans-serif;
 			font-size: 24px;
 			font-weight: 700;
 			text-transform: lowercase;
