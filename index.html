@@ -11116,6 +11116,29 @@
 		integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
 		data-cf-beacon='{"rayId":"8da3f838a83c8c95","version":"2024.10.4","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"df67842450844fa185a3a8a88950c8ba","b":1}'
 		crossorigin="anonymous"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const video = document.getElementById('myVideo');
+				const overlay = document.querySelector('.elementor-custom-embed-image-overlay');
+				const playButton = document.querySelector('.elementor-custom-embed-play');
+			
+				function playVideo() {
+					video.currentTime = 8; // Force le démarrage à 8 secondes
+					video.play();
+					overlay.style.display = 'none';
+				}
+			
+				playButton.addEventListener('click', playVideo);
+				overlay.addEventListener('click', playVideo);
+				
+				// Gestion du redémarrage de la vidéo à 8 secondes après chaque boucle
+				video.addEventListener('timeupdate', function() {
+					if (video.currentTime < 8) {
+						video.currentTime = 8;
+					}
+				});
+			});
+			</script>
 </body>
 
 
