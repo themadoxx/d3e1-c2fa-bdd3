@@ -5206,13 +5206,9 @@
 																		data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;controls&quot;:&quot;yes&quot;}"
 																		data-widget_type="video.default">
 																		<div class="elementor-widget-container">
-																			<div
-																				class="e-hosted-video elementor-wrapper elementor-open-inline">
-																				<video class="elementor-video"
-																					src="../assets/videos/fast-food-react.mp4"
-																					controls="" preload="metadata"
-																					controlsList="nodownload"
-																					poster=""></video>
+																			<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+																				<video id="fastFoodVideo" class="elementor-video" src="../assets/videos/fast-food-react.mp4" autoplay loop muted
+																					playsinline preload="metadata" poster=""></video>
 																			</div>
 																		</div>
 																	</div>
@@ -6285,6 +6281,8 @@
 
 	<a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up scroll_to_top_style_default"
 		title="Scroll to top"></a>
+
+	
 	<script>
 		(function (body) {
 			'use strict';
@@ -6549,8 +6547,25 @@
 		integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
 		data-cf-beacon='{"rayId":"8da3f956ed0d1a30","version":"2024.10.4","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"df67842450844fa185a3a8a88950c8ba","b":1}'
 		crossorigin="anonymous"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					const video = document.getElementById("fastFoodVideo");
+
+					// Attendre que les métadonnées de la vidéo soient chargées pour ajuster le début
+					video.addEventListener("loadedmetadata", function () {
+						video.currentTime = 9; // Commencer à 9 secondes
+					});
+
+					// S'assurer que la vidéo repart à 9 secondes après la fin
+					video.addEventListener("timeupdate", function () {
+						if (video.currentTime >= video.duration) {
+							video.currentTime = 9;
+							video.play();
+						}
+					});
+				});
+			</script>
 </body>
 
-<!-- Mirrored from mthdmarketing.com/about-mthd/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Oct 2024 14:54:53 GMT -->
 
 </html>
